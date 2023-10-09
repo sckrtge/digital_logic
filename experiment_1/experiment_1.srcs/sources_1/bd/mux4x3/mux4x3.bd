@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xBF1AB2BDBF1AB2BD",
+      "boundary_crc": "0xFB4874D9FB4874D9",
       "device": "xc7a35tcpg236-1",
       "name": "mux4x3",
       "synth_flow_mode": "Hierarchical",
@@ -15,7 +15,9 @@
       "and_gate_3_3": "",
       "or_gate_4_0": "",
       "not_gate_0": "",
-      "not_gate_1": ""
+      "not_gate_1": "",
+      "invert_1_digit_to_ma_0": "",
+      "invert_1_digit_to_ma_1": ""
     },
     "ports": {
       "s0": {
@@ -23,22 +25,7 @@
         "left": "2",
         "right": "0"
       },
-      "s14": {
-        "direction": "I",
-        "left": "2",
-        "right": "0"
-      },
-      "s15": {
-        "direction": "I",
-        "left": "2",
-        "right": "0"
-      },
       "s1": {
-        "direction": "I",
-        "left": "2",
-        "right": "0"
-      },
-      "s2": {
         "direction": "I",
         "left": "2",
         "right": "0"
@@ -51,6 +38,21 @@
       "led": {
         "direction": "O",
         "left": "2",
+        "right": "0"
+      },
+      "s2": {
+        "direction": "I",
+        "left": "2",
+        "right": "0"
+      },
+      "s14": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "s15": {
+        "direction": "I",
+        "left": "0",
         "right": "0"
       }
     },
@@ -82,12 +84,20 @@
       "not_gate_1": {
         "vlnv": "xilinx.com:user:not_gate:1.0",
         "xci_name": "mux4x3_not_gate_0_1"
+      },
+      "invert_1_digit_to_ma_0": {
+        "vlnv": "xilinx.com:user:invert_1_digit_to_many:1.0",
+        "xci_name": "mux4x3_invert_1_digit_to_ma_0_0"
+      },
+      "invert_1_digit_to_ma_1": {
+        "vlnv": "xilinx.com:user:invert_1_digit_to_many:1.0",
+        "xci_name": "mux4x3_invert_1_digit_to_ma_0_1"
       }
     },
     "nets": {
       "s15_1": {
         "ports": [
-          "s15",
+          "invert_1_digit_to_ma_1/b",
           "and_gate_3_2/a",
           "and_gate_3_3/a",
           "not_gate_0/a"
@@ -109,7 +119,7 @@
       },
       "s14_1": {
         "ports": [
-          "s14",
+          "invert_1_digit_to_ma_0/b",
           "and_gate_3_3/c",
           "and_gate_3_1/c",
           "not_gate_1/a"
@@ -125,12 +135,6 @@
         "ports": [
           "s1",
           "and_gate_3_1/b"
-        ]
-      },
-      "s2_1": {
-        "ports": [
-          "s2",
-          "and_gate_3_2/b"
         ]
       },
       "s3_1": {
@@ -167,6 +171,24 @@
         "ports": [
           "or_gate_4_0/e",
           "led"
+        ]
+      },
+      "s2_1": {
+        "ports": [
+          "s2",
+          "and_gate_3_2/b"
+        ]
+      },
+      "s14_2": {
+        "ports": [
+          "s14",
+          "invert_1_digit_to_ma_0/a"
+        ]
+      },
+      "s15_2": {
+        "ports": [
+          "s15",
+          "invert_1_digit_to_ma_1/a"
         ]
       }
     }
