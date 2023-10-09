@@ -1,0 +1,12 @@
+and_gate_3.v,verilog,xil_defaultlib,../../../bd/mux4x3/ipshared/20f2/src/and_gate_3.v,
+mux4x3_and_gate_3_0_0.v,verilog,xil_defaultlib,../../../bd/mux4x3/ip/mux4x3_and_gate_3_0_0/sim/mux4x3_and_gate_3_0_0.v,
+mux4x3_and_gate_3_0_1.v,verilog,xil_defaultlib,../../../bd/mux4x3/ip/mux4x3_and_gate_3_0_1/sim/mux4x3_and_gate_3_0_1.v,
+mux4x3_and_gate_3_0_2.v,verilog,xil_defaultlib,../../../bd/mux4x3/ip/mux4x3_and_gate_3_0_2/sim/mux4x3_and_gate_3_0_2.v,
+mux4x3_and_gate_3_0_3.v,verilog,xil_defaultlib,../../../bd/mux4x3/ip/mux4x3_and_gate_3_0_3/sim/mux4x3_and_gate_3_0_3.v,
+or_gate_4.v,verilog,xil_defaultlib,../../../bd/mux4x3/ipshared/8f3f/src/or_gate_4.v,
+mux4x3_or_gate_4_0_0.v,verilog,xil_defaultlib,../../../bd/mux4x3/ip/mux4x3_or_gate_4_0_0/sim/mux4x3_or_gate_4_0_0.v,
+mux4x3.v,verilog,xil_defaultlib,../../../bd/mux4x3/sim/mux4x3.v,
+not_gate.v,verilog,xil_defaultlib,../../../bd/mux4x3/ipshared/cecf/src/not_gate.v,
+mux4x3_not_gate_0_0.v,verilog,xil_defaultlib,../../../bd/mux4x3/ip/mux4x3_not_gate_0_0/sim/mux4x3_not_gate_0_0.v,
+mux4x3_not_gate_0_1.v,verilog,xil_defaultlib,../../../bd/mux4x3/ip/mux4x3_not_gate_0_1/sim/mux4x3_not_gate_0_1.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -31,7 +31,7 @@ module mux4x3_sim(
     reg [2:0] s15 = 3'b000;
     wire [2:0] led;
     
-    mux4x3_verilog u(.s0(s0), .s1(s1), .s2(s2), .s3(s3), .s14(s14), .s15(s15), .led(led));
+    mux4x3 u(.s0(s0), .s1(s1), .s2(s2), .s3(s3), .s14(s14), .s15(s15), .led(led));
     
     initial begin
     #100 s0 = 3'b001;
