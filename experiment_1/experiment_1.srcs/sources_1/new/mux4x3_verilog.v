@@ -21,6 +21,13 @@
 
 
 module mux4x3_verilog(
-
+        input [2:0] s0,
+        input [2:0] s1,
+        input [2:0] s2,
+        input [2:0] s3,
+        input [2:0] s14,
+        input [2:0] s15,
+        output [2:0] led
     );
+    assign led = (~s15&~s14&s0)|(~s15&s14&s1)|(s15&~s14&s2)|(s15&s14&s3);
 endmodule
