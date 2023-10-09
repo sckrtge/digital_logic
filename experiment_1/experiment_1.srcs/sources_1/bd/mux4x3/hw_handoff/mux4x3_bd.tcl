@@ -162,8 +162,8 @@ proc create_root_design { parentCell } {
   set s1 [ create_bd_port -dir I -from 2 -to 0 s1 ]
   set s2 [ create_bd_port -dir I -from 2 -to 0 s2 ]
   set s3 [ create_bd_port -dir I -from 2 -to 0 s3 ]
-  set s14 [ create_bd_port -dir I -from 2 -to 0 s14 ]
-  set s15 [ create_bd_port -dir I -from 2 -to 0 s15 ]
+  set s14 [ create_bd_port -dir I -from 0 -to 0 s14 ]
+  set s15 [ create_bd_port -dir I -from 0 -to 0 s15 ]
 
   # Create instance: and_gate_3_0, and set properties
   set and_gate_3_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:and_gate_3:1.0 and_gate_3_0 ]
@@ -176,6 +176,12 @@ proc create_root_design { parentCell } {
 
   # Create instance: and_gate_3_3, and set properties
   set and_gate_3_3 [ create_bd_cell -type ip -vlnv xilinx.com:user:and_gate_3:1.0 and_gate_3_3 ]
+
+  # Create instance: invert_1_digit_to_ma_0, and set properties
+  set invert_1_digit_to_ma_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:invert_1_digit_to_many:1.0 invert_1_digit_to_ma_0 ]
+
+  # Create instance: invert_1_digit_to_ma_1, and set properties
+  set invert_1_digit_to_ma_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:invert_1_digit_to_many:1.0 invert_1_digit_to_ma_1 ]
 
   # Create instance: not_gate_0, and set properties
   set not_gate_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:not_gate:1.0 not_gate_0 ]
@@ -195,8 +201,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net not_gate_1_c [get_bd_pins and_gate_3_0/a] [get_bd_pins and_gate_3_1/a] [get_bd_pins not_gate_0/c]
   connect_bd_net -net or_gate_4_0_e [get_bd_ports led] [get_bd_pins or_gate_4_0/e]
   connect_bd_net -net s0_1 [get_bd_ports s0] [get_bd_pins and_gate_3_0/b]
-  connect_bd_net -net s14_1 [get_bd_ports s14] [get_bd_pins and_gate_3_1/c] [get_bd_pins and_gate_3_3/c] [get_bd_pins not_gate_1/a]
-  connect_bd_net -net s15_1 [get_bd_ports s15] [get_bd_pins and_gate_3_2/a] [get_bd_pins and_gate_3_3/a] [get_bd_pins not_gate_0/a]
+  connect_bd_net -net s14_1 [get_bd_pins and_gate_3_1/c] [get_bd_pins and_gate_3_3/c] [get_bd_pins invert_1_digit_to_ma_0/b] [get_bd_pins not_gate_1/a]
+  connect_bd_net -net s14_2 [get_bd_ports s14] [get_bd_pins invert_1_digit_to_ma_0/a]
+  connect_bd_net -net s15_1 [get_bd_pins and_gate_3_2/a] [get_bd_pins and_gate_3_3/a] [get_bd_pins invert_1_digit_to_ma_1/b] [get_bd_pins not_gate_0/a]
+  connect_bd_net -net s15_2 [get_bd_ports s15] [get_bd_pins invert_1_digit_to_ma_1/a]
   connect_bd_net -net s1_1 [get_bd_ports s1] [get_bd_pins and_gate_3_1/b]
   connect_bd_net -net s2_1 [get_bd_ports s2] [get_bd_pins and_gate_3_2/b]
   connect_bd_net -net s3_1 [get_bd_ports s3] [get_bd_pins and_gate_3_3/b]

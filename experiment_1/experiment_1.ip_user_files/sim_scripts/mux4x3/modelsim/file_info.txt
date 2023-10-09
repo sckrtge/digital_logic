@@ -9,4 +9,7 @@ mux4x3.v,verilog,xil_defaultlib,../../../bd/mux4x3/sim/mux4x3.v,
 not_gate.v,verilog,xil_defaultlib,../../../bd/mux4x3/ipshared/cecf/src/not_gate.v,
 mux4x3_not_gate_0_0.v,verilog,xil_defaultlib,../../../bd/mux4x3/ip/mux4x3_not_gate_0_0/sim/mux4x3_not_gate_0_0.v,
 mux4x3_not_gate_0_1.v,verilog,xil_defaultlib,../../../bd/mux4x3/ip/mux4x3_not_gate_0_1/sim/mux4x3_not_gate_0_1.v,
+invert_1_digit_to_many.v,verilog,xil_defaultlib,../../../bd/mux4x3/ipshared/fd64/src/invert_1_digit_to_many.v,
+mux4x3_invert_1_digit_to_ma_0_0.v,verilog,xil_defaultlib,../../../bd/mux4x3/ip/mux4x3_invert_1_digit_to_ma_0_0/sim/mux4x3_invert_1_digit_to_ma_0_0.v,
+mux4x3_invert_1_digit_to_ma_0_1.v,verilog,xil_defaultlib,../../../bd/mux4x3/ip/mux4x3_invert_1_digit_to_ma_0_1/sim/mux4x3_invert_1_digit_to_ma_0_1.v,
 glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -17,6 +17,9 @@ vlog -work xil_defaultlib -64 -incr \
 "../../../bd/mux4x3/ipshared/cecf/src/not_gate.v" \
 "../../../bd/mux4x3/ip/mux4x3_not_gate_0_0/sim/mux4x3_not_gate_0_0.v" \
 "../../../bd/mux4x3/ip/mux4x3_not_gate_0_1/sim/mux4x3_not_gate_0_1.v" \
+"../../../bd/mux4x3/ipshared/fd64/src/invert_1_digit_to_many.v" \
+"../../../bd/mux4x3/ip/mux4x3_invert_1_digit_to_ma_0_0/sim/mux4x3_invert_1_digit_to_ma_0_0.v" \
+"../../../bd/mux4x3/ip/mux4x3_invert_1_digit_to_ma_0_1/sim/mux4x3_invert_1_digit_to_ma_0_1.v" \
 
 
 vlog -work xil_defaultlib \

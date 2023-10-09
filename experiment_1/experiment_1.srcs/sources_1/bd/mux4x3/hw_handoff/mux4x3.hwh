@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct  9 10:15:21 2023" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct  9 14:30:29 2023" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="mux4x3" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -9,28 +9,9 @@
         <CONNECTION INSTANCE="and_gate_3_0" PORT="b"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="2" NAME="s14" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s14">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="and_gate_3_3" PORT="c"/>
-        <CONNECTION INSTANCE="and_gate_3_1" PORT="c"/>
-        <CONNECTION INSTANCE="not_gate_1" PORT="a"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="2" NAME="s15" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s15">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="and_gate_3_2" PORT="a"/>
-        <CONNECTION INSTANCE="and_gate_3_3" PORT="a"/>
-        <CONNECTION INSTANCE="not_gate_0" PORT="a"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" LEFT="2" NAME="s1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s1">
       <CONNECTIONS>
         <CONNECTION INSTANCE="and_gate_3_1" PORT="b"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="2" NAME="s2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s2">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="and_gate_3_2" PORT="b"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="2" NAME="s3" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s3">
@@ -41,6 +22,21 @@
     <PORT DIR="O" LEFT="2" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="or_gate_4_0_e">
       <CONNECTIONS>
         <CONNECTION INSTANCE="or_gate_4_0" PORT="e"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="2" NAME="s2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="and_gate_3_2" PORT="b"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="s14" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s14">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="invert_1_digit_to_ma_0" PORT="a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="s15" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s15">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="invert_1_digit_to_ma_1" PORT="a"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -97,9 +93,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="s1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="c" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s14">
+        <PORT DIR="I" LEFT="2" NAME="c" RIGHT="0" SIGIS="undef" SIGNAME="invert_1_digit_to_ma_0_b">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="s14"/>
+            <CONNECTION INSTANCE="invert_1_digit_to_ma_0" PORT="b"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="d" RIGHT="0" SIGIS="undef" SIGNAME="and_gate_3_1_d">
@@ -118,9 +114,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="2" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s15">
+        <PORT DIR="I" LEFT="2" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="invert_1_digit_to_ma_1_b">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="s15"/>
+            <CONNECTION INSTANCE="invert_1_digit_to_ma_1" PORT="b"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="2" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s2">
@@ -149,9 +145,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="2" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s15">
+        <PORT DIR="I" LEFT="2" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="invert_1_digit_to_ma_1_b">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="s15"/>
+            <CONNECTION INSTANCE="invert_1_digit_to_ma_1" PORT="b"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="2" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s3">
@@ -159,14 +155,58 @@
             <CONNECTION INSTANCE="External_Ports" PORT="s3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="c" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s14">
+        <PORT DIR="I" LEFT="2" NAME="c" RIGHT="0" SIGIS="undef" SIGNAME="invert_1_digit_to_ma_0_b">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="s14"/>
+            <CONNECTION INSTANCE="invert_1_digit_to_ma_0" PORT="b"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="d" RIGHT="0" SIGIS="undef" SIGNAME="and_gate_3_3_d">
           <CONNECTIONS>
             <CONNECTION INSTANCE="or_gate_4_0" PORT="d"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/invert_1_digit_to_ma_0" HWVERSION="1.0" INSTANCE="invert_1_digit_to_ma_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="invert_1_digit_to_many" VLNV="xilinx.com:user:invert_1_digit_to_many:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="mux4x3_invert_1_digit_to_ma_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s14">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s14"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="invert_1_digit_to_ma_0_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="and_gate_3_3" PORT="c"/>
+            <CONNECTION INSTANCE="and_gate_3_1" PORT="c"/>
+            <CONNECTION INSTANCE="not_gate_1" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/invert_1_digit_to_ma_1" HWVERSION="1.0" INSTANCE="invert_1_digit_to_ma_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="invert_1_digit_to_many" VLNV="xilinx.com:user:invert_1_digit_to_many:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="mux4x3_invert_1_digit_to_ma_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s15">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s15"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="invert_1_digit_to_ma_1_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="and_gate_3_2" PORT="a"/>
+            <CONNECTION INSTANCE="and_gate_3_3" PORT="a"/>
+            <CONNECTION INSTANCE="not_gate_0" PORT="a"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -180,9 +220,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="2" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s15">
+        <PORT DIR="I" LEFT="2" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="invert_1_digit_to_ma_1_b">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="s15"/>
+            <CONNECTION INSTANCE="invert_1_digit_to_ma_1" PORT="b"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="c" RIGHT="0" SIGIS="undef" SIGNAME="not_gate_0_c">
@@ -202,9 +242,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="2" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s14">
+        <PORT DIR="I" LEFT="2" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="invert_1_digit_to_ma_0_b">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="s14"/>
+            <CONNECTION INSTANCE="invert_1_digit_to_ma_0" PORT="b"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="c" RIGHT="0" SIGIS="undef" SIGNAME="not_gate_1_c">
